@@ -126,6 +126,7 @@ celerybeat.pid
 # Environments
 .env
 .venv
+.qtcreator
 env/
 venv/
 ENV/
@@ -224,6 +225,10 @@ target_wrapper.*
 *.qmlproject.user.*
 
 # QtCreator CMake
+*.toml.user
+*.toml.user.*
+
+# QtCreator CMake
 CMakeLists.txt.user*
 
 # QtCreator 4.8< compilation database
@@ -274,7 +279,6 @@ resources.py
 
 # Application specific
 config.ini
-settings.json
 *.db
 *.sqlite
 *.sqlite3
