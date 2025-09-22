@@ -1,13 +1,8 @@
 from PySide6.QtCore import Qt
-from PySide6.QtWidgets import (
-    QMainWindow,
-    QWidget,
-    QVBoxLayout,
-    QLabel,
-    QPushButton,
-)
+from PySide6.QtWidgets import QMainWindow, QMessageBox
 
 from session_manager import WindowManager
+from ui_dashboard import Ui_DashboardWindow
 
 
 class DashboardWindow(QMainWindow):
@@ -16,71 +11,27 @@ class DashboardWindow(QMainWindow):
     def __init__(self, user_email: str, parent=None):
         super().__init__(parent)
         self.user_email = user_email
+        self.ui = Ui_DashboardWindow()
+        self.ui.setupUi(self)
         self.setup_ui()
 
     def setup_ui(self):
         """Thiết lập giao diện dashboard"""
-        self.setWindowTitle("Seminary Management System - Dashboard")
-        self.setGeometry(200, 200, 800, 600)
-        
         # Setup window icon
         self.setup_window_icon()
 
-        # Widget chính
-        central_widget = QWidget()
-        layout = QVBoxLayout(central_widget)
+        # Update welcome message with user email
+        self.ui.welcomeLabel.setText(f"Chào mừng, {self.user_email}!")
 
-        # Welcome message
-        welcome_label = QLabel(f"Chào mừng, {self.user_email}!")
-        welcome_label.setStyleSheet("""
-            QLabel {
-                font-size: 24px;
-                font-weight: bold;
-                color: #1F41BB;
-                margin: 20px;
-                qproperty-alignment: AlignCenter;
-            }
-        """)
+        # Connect signals
+        self.ui.logoutButton.clicked.connect(self.handle_logout)
+        self.ui.actionLogout.triggered.connect(self.handle_logout)
+        self.ui.actionExit.triggered.connect(self.close)
+        self.ui.actionAbout.triggered.connect(self.show_about)
 
-        # Status message
-        status_label = QLabel("Cửa sổ chính đang được phát triển...")
-        status_label.setStyleSheet("""
-            QLabel {
-                font-size: 16px;
-                color: #666;
-                margin: 10px;
-                qproperty-alignment: AlignCenter;
-            }
-        """)
+        # Set status bar message
+        self.ui.statusbar.showMessage("Sẵn sàng - Dashboard đang được phát triển")
 
-        # Logout button
-        logout_button = QPushButton("Đăng xuất")
-        logout_button.setStyleSheet("""
-            QPushButton {
-                background-color: #1F41BB;
-                color: white;
-                border: none;
-                padding: 10px 20px;
-                border-radius: 5px;
-                font-size: 14px;
-                font-weight: bold;
-                max-width: 150px;
-            }
-            QPushButton:hover {
-                background-color: #1a3aa3;
-            }
-        """)
-        logout_button.clicked.connect(self.handle_logout)
-
-        # Add widgets to layout
-        layout.addWidget(welcome_label)
-        layout.addWidget(status_label)
-        layout.addStretch()
-        layout.addWidget(logout_button, alignment=Qt.AlignCenter)
-        layout.addStretch()
-
-        self.setCentralWidget(central_widget)
-    
     def setup_window_icon(self):
         """Setup window icon using logo.ico"""
         WindowManager.setup_window_icon(self)
@@ -88,3 +39,14 @@ class DashboardWindow(QMainWindow):
     def handle_logout(self):
         """Xử lý đăng xuất"""
         WindowManager.handle_logout(self)
+
+    def show_about(self):
+        """Hiển thị thông tin về ứng dụng"""
+        QMessageBox.about(
+            self,
+            "Về Seminary Management System",
+            "Seminary Management System v0.1.0\n\n"
+            "Hệ thống quản lý Chủng viện\n"
+            "Phát triển bằng PySide6 (Qt for Python)\n\n"
+            "© 2025 Seminary Management Team",
+        )

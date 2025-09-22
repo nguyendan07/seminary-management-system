@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>DashboardWindow</class>
+    <widget class="QMainWindow" name="DashboardWindow">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>800</width>
+                <height>600</height>
+            </rect>
+        </property>
+        <property name="windowTitle">
+            <string>Seminary Management System - Dashboard</string>
+        </property>
+        <property name="styleSheet">
+            <string notr="true">
+                QMainWindow {
+                    background-color: #f8f9fa;
+                }
+            </string>
+        </property>
+        <widget class="QWidget" name="centralwidget">
+            <property name="styleSheet">
+                <string notr="true">
+                    QWidget {
+                        background-color: #f8f9fa;
+                    }
+                </string>
+            </property>
+            <layout class="QVBoxLayout" name="mainLayout">
+                <property name="spacing">
+                    <number>20</number>
+                </property>
+                <property name="leftMargin">
+                    <number>40</number>
+                </property>
+                <property name="topMargin">
+                    <number>40</number>
+                </property>
+                <property name="rightMargin">
+                    <number>40</number>
+                </property>
+                <property name="bottomMargin">
+                    <number>40</number>
+                </property>
+                <item>
+                    <widget class="QLabel" name="welcomeLabel">
+                        <property name="text">
+                            <string>Chào mừng, [User Email]!</string>
+                        </property>
+                        <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="styleSheet">
+                            <string notr="true">
+                                QLabel {
+                                    font-size: 24px;
+                                    font-weight: bold;
+                                    color: #1F41BB;
+                                    margin: 20px;
+                                    padding: 10px;
+                                }
+                            </string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <widget class="QLabel" name="statusLabel">
+                        <property name="text">
+                            <string>Cửa sổ chính đang được phát triển...</string>
+                        </property>
+                        <property name="alignment">
+                            <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="styleSheet">
+                            <string notr="true">
+                                QLabel {
+                                    font-size: 16px;
+                                    color: #666;
+                                    margin: 10px;
+                                    padding: 5px;
+                                }
+                            </string>
+                        </property>
+                    </widget>
+                </item>
+                <item>
+                    <spacer name="topSpacer">
+                        <property name="orientation">
+                            <enum>Qt::Vertical</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                            <size>
+                                <width>20</width>
+                                <height>40</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </item>
+                <item>
+                    <widget class="QWidget" name="buttonContainer">
+                        <property name="maximumSize">
+                            <size>
+                                <width>16777215</width>
+                                <height>60</height>
+                            </size>
+                        </property>
+                        <layout class="QHBoxLayout" name="buttonLayout">
+                            <item>
+                                <spacer name="leftButtonSpacer">
+                                    <property name="orientation">
+                                        <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                        <size>
+                                            <width>40</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                            </item>
+                            <item>
+                                <widget class="QPushButton" name="logoutButton">
+                                    <property name="maximumSize">
+                                        <size>
+                                            <width>150</width>
+                                            <height>50</height>
+                                        </size>
+                                    </property>
+                                    <property name="text">
+                                        <string>Đăng xuất</string>
+                                    </property>
+                                    <property name="styleSheet">
+                                        <string notr="true">
+                                            QPushButton {
+                                                background-color: #1F41BB;
+                                                color: white;
+                                                border: none;
+                                                padding: 10px 20px;
+                                                border-radius: 5px;
+                                                font-size: 14px;
+                                                font-weight: bold;
+                                                min-width: 130px;
+                                            }
+                                            QPushButton:hover {
+                                                background-color: #1a3aa3;
+                                            }
+                                            QPushButton:pressed {
+                                                background-color: #163399;
+                                            }
+                                        </string>
+                                    </property>
+                                </widget>
+                            </item>
+                            <item>
+                                <spacer name="rightButtonSpacer">
+                                    <property name="orientation">
+                                        <enum>Qt::Horizontal</enum>
+                                    </property>
+                                    <property name="sizeHint" stdset="0">
+                                        <size>
+                                            <width>40</width>
+                                            <height>20</height>
+                                        </size>
+                                    </property>
+                                </spacer>
+                            </item>
+                        </layout>
+                    </widget>
+                </item>
+                <item>
+                    <spacer name="bottomSpacer">
+                        <property name="orientation">
+                            <enum>Qt::Vertical</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                            <size>
+                                <width>20</width>
+                                <height>40</height>
+                            </size>
+                        </property>
+                    </spacer>
+                </item>
+            </layout>
+        </widget>
+        <widget class="QMenuBar" name="menubar">
+            <property name="geometry">
+                <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>800</width>
+                    <height>22</height>
+                </rect>
+            </property>
+            <widget class="QMenu" name="menuFile">
+                <property name="title">
+                    <string>File</string>
+                </property>
+                <addaction name="actionLogout" />
+                <addaction name="separator" />
+                <addaction name="actionExit" />
+            </widget>
+            <widget class="QMenu" name="menuHelp">
+                <property name="title">
+                    <string>Help</string>
+                </property>
+                <addaction name="actionAbout" />
+            </widget>
+            <addaction name="menuFile" />
+            <addaction name="menuHelp" />
+        </widget>
+        <widget class="QStatusBar" name="statusbar">
+            <property name="styleSheet">
+                <string notr="true">QStatusBar {
+                    background-color: #e9ecef;
+                    border-top: 1px solid #dee2e6;
+                    }</string>
+            </property>
+        </widget>
+        <action name="actionLogout">
+            <property name="text">
+                <string>Logout</string>
+            </property>
+            <property name="shortcut">
+                <string>Ctrl+L</string>
+            </property>
+        </action>
+        <action name="actionExit">
+            <property name="text">
+                <string>Exit</string>
+            </property>
+            <property name="shortcut">
+                <string>Ctrl+Q</string>
+            </property>
+        </action>
+        <action name="actionAbout">
+            <property name="text">
+                <string>About</string>
+            </property>
+            <property name="shortcut">
+                <string>F1</string>
+            </property>
+        </action>
+    </widget>
+    <resources />
+    <connections>
+        <connection>
+            <sender>logoutButton</sender>
+            <signal>clicked()</signal>
+            <receiver>DashboardWindow</receiver>
+            <slot>handle_logout()</slot>
+            <hints>
+                <hint type="sourcelabel">
+                    <x>400</x>
+                    <y>450</y>
+                </hint>
+                <hint type="destinationlabel">
+                    <x>400</x>
+                    <y>300</y>
+                </hint>
+            </hints>
+        </connection>
+        <connection>
+            <sender>actionLogout</sender>
+            <signal>triggered()</signal>
+            <receiver>DashboardWindow</receiver>
+            <slot>handle_logout()</slot>
+            <hints>
+                <hint type="sourcelabel">
+                    <x>-1</x>
+                    <y>-1</y>
+                </hint>
+                <hint type="destinationlabel">
+                    <x>400</x>
+                    <y>300</y>
+                </hint>
+            </hints>
+        </connection>
+        <connection>
+            <sender>actionExit</sender>
+            <signal>triggered()</signal>
+            <receiver>DashboardWindow</receiver>
+            <slot>close()</slot>
+            <hints>
+                <hint type="sourcelabel">
+                    <x>-1</x>
+                    <y>-1</y>
+                </hint>
+                <hint type="destinationlabel">
+                    <x>400</x>
+                    <y>300</y>
+                </hint>
+            </hints>
+        </connection>
+    </connections>
+    <slots>
+        <slot>handle_logout()</slot>
+    </slots>
+</ui>
