@@ -197,7 +197,6 @@
                                                                         height: 52px;
                                                                         padding: 12px 21px 12px 12px;
                                                                         background-color: #F1F4FF !important;
-                                                                        border: 2px solid #1F41BB;
                                                                         border-radius: 8px;
                                                                         font-family: 'Poppins';
                                                                         font-size: 16px;
@@ -207,6 +206,9 @@
                                                                     QLineEdit::placeholder {
                                                                         color: #626262 !important;
                                                                         font-weight: 500;
+                                                                    }
+                                                                    QLineEdit::focus {
+                                                                        border: 2px solid #1F41BB;
                                                                     }
                                                                 </string>
                                                             </property>
@@ -237,7 +239,6 @@
                                                                         height: 52px;
                                                                         padding: 12px 21px 12px 12px;
                                                                         background-color: #F1F4FF !important;
-                                                                        border: 2px solid #1F41BB;
                                                                         border-radius: 8px;
                                                                         font-family: 'Poppins';
                                                                         font-size: 16px;
@@ -247,6 +248,9 @@
                                                                     QLineEdit::placeholder {
                                                                         color: #626262 !important;
                                                                         font-weight: 500;
+                                                                    }
+                                                                    QLineEdit::focus {
+                                                                        border: 2px solid #1F41BB;
                                                                     }
                                                                 </string>
                                                             </property>
@@ -285,8 +289,7 @@
                                                             color: #1F41BB !important;
                                                             border: none;
                                                             background: transparent;
-                                                            qproperty-alignment: 'AlignRight |
-                                                            AlignVCenter';
+                                                            qproperty-alignment: 'AlignRight | AlignVCenter';
                                                             text-align: right;
                                                             margin-right: 0px;
                                                             padding-right: 0px;
@@ -366,8 +369,7 @@
                                                                     QPushButton {
                                                                         width: 357px;
                                                                         height: 52px;
-                                                                        background-color: #1F41BB
-                                                                        !important;
+                                                                        background-color: #1F41BB !important;
                                                                         border-radius: 8px;
                                                                         border: none;
                                                                         font-family: 'Poppins';
