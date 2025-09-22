@@ -9,7 +9,7 @@ dependencies = [
 ]
 
 [tool.pyside6-project]
-files = ["mainwindow.py", "form.ui", "dashboard.py", "session_manager.py", "app.py"]
+files = ["app.py", "dashboard.py", "dashboard.ui", "form.ui", "mainwindow.py", "session_manager.py"]
 
 [dependency-groups]
 dev = [
