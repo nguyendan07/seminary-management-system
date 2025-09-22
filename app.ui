@@ -96,21 +96,23 @@
                                     </size>
                                 </property>
                                 <property name="styleSheet">
-                                    <string notr="true">QPushButton {
-                                        background-color: #dc3545;
-                                        color: white;
-                                        border: none;
-                                        padding: 8px 16px;
-                                        border-radius: 4px;
-                                        font-weight: bold;
-                                        font-size: 14px;
+                                    <string notr="true">
+                                        QPushButton {
+                                            background-color: #dc3545;
+                                            color: white;
+                                            border: none;
+                                            padding: 8px 16px;
+                                            border-radius: 4px;
+                                            font-weight: bold;
+                                            font-size: 14px;
                                         }
                                         QPushButton:hover {
-                                        background-color: #c82333;
+                                            background-color: #c82333;
                                         }
                                         QPushButton:pressed {
-                                        background-color: #bd2130;
-                                        }</string>
+                                            background-color: #bd2130;
+                                        }
+                                    </string>
                                 </property>
                                 <property name="text">
                                     <string>Đăng xuất</string>
@@ -122,93 +124,270 @@
                 <item>
                     <widget class="QTabWidget" name="tabWidget">
                         <property name="styleSheet">
-                            <string notr="true">QTabWidget::pane {
-                                border: 1px solid #dee2e6;
-                                background-color: white;
-                                border-radius: 5px;
+                            <string notr="true">
+                                QTabWidget::pane {
+                                    border: 1px solid #dee2e6;
+                                    background-color: white;
+                                    border-radius: 5px;
                                 }
 
                                 QTabBar::tab {
-                                background-color: #e9ecef;
-                                border: 1px solid #dee2e6;
-                                padding: 8px 15px;
-                                margin-right: 2px;
-                                border-top-left-radius: 5px;
-                                border-top-right-radius: 5px;
+                                    background-color: #e9ecef;
+                                    color: #495057;
+                                    border: 1px solid #dee2e6;
+                                    padding: 8px 15px;
+                                    margin-right: 2px;
+                                    border-top-left-radius: 5px;
+                                    border-top-right-radius: 5px;
                                 }
 
                                 QTabBar::tab:selected {
-                                background-color: white;
-                                border-bottom: 1px solid white;
-                                color: #1F41BB;
-                                font-weight: bold;
+                                    background-color: white;
+                                    border-bottom: 1px solid white;
+                                    color: #1F41BB;
+                                    font-weight: bold;
                                 }
 
                                 QTabBar::tab:hover {
-                                background-color: #f8f9fa;
-                                }</string>
+                                    background-color: #f8f9fa;
+                                }
+                            </string>
                         </property>
                         <property name="currentIndex">
                             <number>0</number>
                         </property>
-                        <widget class="QWidget" name="dashboardTab">
+                        <widget class="QWidget" name="studentTab">
                             <attribute name="title">
-                                <string>Dashboard</string>
+                                <string>Chủng Sinh</string>
                             </attribute>
-                            <layout class="QVBoxLayout" name="dashboardLayout">
+                            <layout class="QVBoxLayout" name="studentLayout">
+                                <property name="spacing">
+                                    <number>10</number>
+                                </property>
+                                <property name="leftMargin">
+                                    <number>15</number>
+                                </property>
+                                <property name="topMargin">
+                                    <number>15</number>
+                                </property>
+                                <property name="rightMargin">
+                                    <number>15</number>
+                                </property>
+                                <property name="bottomMargin">
+                                    <number>15</number>
+                                </property>
                                 <item>
-                                    <widget class="QLabel" name="dashboardContent">
+                                    <layout class="QHBoxLayout" name="studentToolbarLayout">
+                                        <property name="spacing">
+                                            <number>10</number>
+                                        </property>
+                                        <item>
+                                            <widget class="QLabel" name="studentTitleLabel">
+                                                <property name="styleSheet">
+                                                    <string notr="true">QLabel {
+                                                        font-size: 16px;
+                                                        font-weight: bold;
+                                                        color: #495057;
+                                                        padding: 5px;
+                                                        }</string>
+                                                </property>
+                                                <property name="text">
+                                                    <string>Quản lý Chủng Sinh</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <spacer name="studentToolbarSpacer">
+                                                <property name="orientation">
+                                                    <enum>Qt::Orientation::Horizontal</enum>
+                                                </property>
+                                                <property name="sizeHint" stdset="0">
+                                                    <size>
+                                                        <width>40</width>
+                                                        <height>20</height>
+                                                    </size>
+                                                </property>
+                                            </spacer>
+                                        </item>
+                                        <item>
+                                            <widget class="QLineEdit" name="studentSearchEdit">
+                                                <property name="maximumSize">
+                                                    <size>
+                                                        <width>250</width>
+                                                        <height>16777215</height>
+                                                    </size>
+                                                </property>
+                                                <property name="styleSheet">
+                                                    <string notr="true">
+                                                        QLineEdit {
+                                                            padding: 8px 12px;
+                                                            border: 1px solid #ced4da;
+                                                            border-radius: 4px;
+                                                            font-size: 14px;
+                                                            background-color: white;
+                                                            color: #495057;
+                                                        }
+                                                        QLineEdit:focus {
+                                                            border-color: #1F41BB;
+                                                            outline: none;
+                                                        }</string>
+                                                </property>
+                                                <property name="placeholderText">
+                                                    <string>Tìm kiếm sinh viên...</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                        <item>
+                                            <widget class="QPushButton" name="addStudentButton">
+                                                <property name="maximumSize">
+                                                    <size>
+                                                        <width>150</width>
+                                                        <height>40</height>
+                                                    </size>
+                                                </property>
+                                                <property name="styleSheet">
+                                                    <string notr="true">
+                                                        QPushButton {
+                                                            background-color: #28a745;
+                                                            color: white;
+                                                            border: none;
+                                                            padding: 8px 16px;
+                                                            border-radius: 4px;
+                                                            font-weight: bold;
+                                                            font-size: 14px;
+                                                        }
+                                                        QPushButton:hover {
+                                                            background-color: #218838;
+                                                        }
+                                                        QPushButton:pressed {
+                                                            background-color: #1e7e34;
+                                                        }</string>
+                                                </property>
+                                                <property name="text">
+                                                    <string>+ Thêm Sinh Viên</string>
+                                                </property>
+                                            </widget>
+                                        </item>
+                                    </layout>
+                                </item>
+                                <item>
+                                    <widget class="QTableWidget" name="studentTableWidget">
                                         <property name="styleSheet">
-                                            <string notr="true">QLabel {
-                                                font-size: 14px;
-                                                color: #495057;
-                                                padding: 20px;
-                                                line-height: 1.5;
-                                                }</string>
+                                            <string notr="true">
+                                                QTableWidget {
+                                                    gridline-color: #dee2e6;
+                                                    background-color: white;
+                                                    border: 1px solid #dee2e6;
+                                                    border-radius: 4px;
+                                                    selection-background-color: #e3f2fd;
+                                                }
+                                                
+                                                QHeaderView::section {
+                                                    background-color: #f8f9fa;
+                                                    color: #495057;
+                                                    border: 1px solid #dee2e6;
+                                                    padding: 8px 12px;
+                                                    font-weight: bold;
+                                                    font-size: 14px;
+                                                }
+                                                
+                                                QTableWidget::item {
+                                                    padding: 8px 12px;
+                                                    border-bottom: 1px solid #dee2e6;
+                                                    font-size: 13px;
+                                                    color: #495057;
+                                                }
+                                                
+                                                QTableWidget::item:selected {
+                                                    background-color: #e3f2fd;
+                                                    color: #1976d2;
+                                                }
+                                                
+                                                QTableWidget::item:hover {
+                                                    background-color: #f5f5f5;
+                                                }
+                                            </string>
                                         </property>
-                                        <property name="text">
-                                            <string>Dashboard Content
-
-                                                Thống kê tổng quan:
-                                                • Tổng số sinh viên: [Số liệu]
-                                                • Tổng số khóa học: [Số liệu]
-                                                • Điểm danh hôm nay: [Số liệu]
-                                                • Báo cáo mới nhất: [Ngày]
-
-                                                Nội dung chi tiết sẽ được bổ sung...</string>
+                                        <property name="alternatingRowColors">
+                                            <bool>true</bool>
                                         </property>
-                                        <property name="alignment">
-                                            <set>
-                                                Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
+                                        <property name="selectionBehavior">
+                                            <enum>QAbstractItemView::SelectRows</enum>
                                         </property>
+                                        <property name="sortingEnabled">
+                                            <bool>true</bool>
+                                        </property>
+                                        <attribute name="horizontalHeaderCascadingSectionResizes">
+                                            <bool>false</bool>
+                                        </attribute>
+                                        <attribute name="horizontalHeaderStretchLastSection">
+                                            <bool>true</bool>
+                                        </attribute>
+                                        <column>
+                                            <property name="text">
+                                                <string>ID</string>
+                                            </property>
+                                        </column>
+                                        <column>
+                                            <property name="text">
+                                                <string>Tên</string>
+                                            </property>
+                                        </column>
+                                        <column>
+                                            <property name="text">
+                                                <string>Ngày Sinh</string>
+                                            </property>
+                                        </column>
+                                        <column>
+                                            <property name="text">
+                                                <string>Quê Quán</string>
+                                            </property>
+                                        </column>
+                                        <column>
+                                            <property name="text">
+                                                <string>Giao Xứ</string>
+                                            </property>
+                                        </column>
+                                        <column>
+                                            <property name="text">
+                                                <string>Giáo Phận</string>
+                                            </property>
+                                        </column>
+                                        <column>
+                                            <property name="text">
+                                                <string>Thao tác</string>
+                                            </property>
+                                        </column>
                                     </widget>
                                 </item>
                             </layout>
                         </widget>
-                        <widget class="QWidget" name="studentsTab">
+                        <widget class="QWidget" name="teachersTab">
                             <attribute name="title">
-                                <string>Students</string>
+                                <string>Cha Giáo</string>
                             </attribute>
-                            <layout class="QVBoxLayout" name="studentsLayout">
+                            <layout class="QVBoxLayout" name="teachersLayout">
                                 <item>
-                                    <widget class="QLabel" name="studentsContent">
+                                    <widget class="QLabel" name="teachersContent">
                                         <property name="styleSheet">
-                                            <string notr="true">QLabel {
-                                                font-size: 14px;
-                                                color: #495057;
-                                                padding: 20px;
-                                                line-height: 1.5;
-                                                }</string>
+                                            <string notr="true">
+                                                QLabel {
+                                                    font-size: 14px;
+                                                    color: #495057;
+                                                    padding: 20px;
+                                                    line-height: 1.5;
+                                                }
+                                            </string>
                                         </property>
                                         <property name="text">
-                                            <string>Student Management
+                                            <string>Teacher Management
 
-                                                Chức năng quản lý sinh viên:
-                                                • Thêm sinh viên mới
-                                                • Cập nhật thông tin sinh viên
-                                                • Xem danh sách sinh viên
-                                                • Tìm kiếm sinh viên
-                                                • Xuất báo cáo sinh viên
+                                                Chức năng quản lý giáo viên:
+                                                • Thêm giáo viên mới
+                                                • Cập nhật thông tin giáo viên
+                                                • Xem danh sách giáo viên
+                                                • Phân công giảng dạy
+                                                • Xuất báo cáo giáo viên
 
                                                 Module này đang được phát triển...</string>
                                         </property>
@@ -220,13 +399,13 @@
                                 </item>
                             </layout>
                         </widget>
-                        <widget class="QWidget" name="coursesTab">
+                        <widget class="QWidget" name="gradesTab">
                             <attribute name="title">
-                                <string>Courses</string>
+                                <string>Điểm</string>
                             </attribute>
-                            <layout class="QVBoxLayout" name="coursesLayout">
+                            <layout class="QVBoxLayout" name="gradesLayout">
                                 <item>
-                                    <widget class="QLabel" name="coursesContent">
+                                    <widget class="QLabel" name="gradesContent">
                                         <property name="styleSheet">
                                             <string notr="true">QLabel {
                                                 font-size: 14px;
@@ -255,13 +434,13 @@
                                 </item>
                             </layout>
                         </widget>
-                        <widget class="QWidget" name="attendanceTab">
+                        <widget class="QWidget" name="evaluationTab">
                             <attribute name="title">
-                                <string>Attendance</string>
+                                <string>Nhận Định</string>
                             </attribute>
-                            <layout class="QVBoxLayout" name="attendanceLayout">
+                            <layout class="QVBoxLayout" name="evaluationLayout">
                                 <item>
-                                    <widget class="QLabel" name="attendanceContent">
+                                    <widget class="QLabel" name="evaluationContent">
                                         <property name="styleSheet">
                                             <string notr="true">QLabel {
                                                 font-size: 14px;
@@ -290,41 +469,6 @@
                                 </item>
                             </layout>
                         </widget>
-                        <widget class="QWidget" name="reportsTab">
-                            <attribute name="title">
-                                <string>Reports</string>
-                            </attribute>
-                            <layout class="QVBoxLayout" name="reportsLayout">
-                                <item>
-                                    <widget class="QLabel" name="reportsContent">
-                                        <property name="styleSheet">
-                                            <string notr="true">QLabel {
-                                                font-size: 14px;
-                                                color: #495057;
-                                                padding: 20px;
-                                                line-height: 1.5;
-                                                }</string>
-                                        </property>
-                                        <property name="text">
-                                            <string>Reports Management
-
-                                                Chức năng báo cáo:
-                                                • Báo cáo tổng quan
-                                                • Báo cáo sinh viên
-                                                • Báo cáo khóa học
-                                                • Báo cáo điểm danh
-                                                • Xuất file Excel/PDF
-
-                                                Module này đang được phát triển...</string>
-                                        </property>
-                                        <property name="alignment">
-                                            <set>
-                                                Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
-                                        </property>
-                                    </widget>
-                                </item>
-                            </layout>
-                        </widget>
                     </widget>
                 </item>
             </layout>
@@ -335,7 +479,7 @@
                     <x>0</x>
                     <y>0</y>
                     <width>1200</width>
-                    <height>21</height>
+                    <height>25</height>
                 </rect>
             </property>
             <widget class="QMenu" name="menuFile">
@@ -587,6 +731,38 @@
                 </hint>
             </hints>
         </connection>
+        <connection>
+            <sender>addStudentButton</sender>
+            <signal>clicked()</signal>
+            <receiver>AppWindow</receiver>
+            <slot>add_student()</slot>
+            <hints>
+                <hint type="sourcelabel">
+                    <x>-1</x>
+                    <y>-1</y>
+                </hint>
+                <hint type="destinationlabel">
+                    <x>600</x>
+                    <y>400</y>
+                </hint>
+            </hints>
+        </connection>
+        <connection>
+            <sender>studentSearchEdit</sender>
+            <signal>textChanged(QString)</signal>
+            <receiver>AppWindow</receiver>
+            <slot>search_students(QString)</slot>
+            <hints>
+                <hint type="sourcelabel">
+                    <x>-1</x>
+                    <y>-1</y>
+                </hint>
+                <hint type="destinationlabel">
+                    <x>600</x>
+                    <y>400</y>
+                </hint>
+            </hints>
+        </connection>
     </connections>
     <slots>
         <slot>handle_logout()</slot>
@@ -596,5 +772,7 @@
         <slot>switch_to_courses()</slot>
         <slot>switch_to_attendance()</slot>
         <slot>switch_to_reports()</slot>
+        <slot>add_student()</slot>
+        <slot>search_students(QString)</slot>
     </slots>
 </ui>

@@ -1,0 +1,86 @@
+{
+  "students": [
+    {
+      "id": "SV001",
+      "name": "Nguyễn Văn An",
+      "birth_date": "15/03/1995",
+      "hometown": "Hà Nội",
+      "parish": "Gx Thánh Giuse",
+      "diocese": "Gp Hà Nội"
+    },
+    {
+      "id": "SV002",
+      "name": "Trần Thành Bình",
+      "birth_date": "22/07/1996",
+      "hometown": "TP.HCM",
+      "parish": "Gx Đức Bà",
+      "diocese": "Gp TP.HCM"
+    },
+    {
+      "id": "SV003",
+      "name": "Lê Minh Cường",
+      "birth_date": "08/11/1994",
+      "hometown": "Đà Nẵng",
+      "parish": "Gx Chính Tòa",
+      "diocese": "Gp Đà Nẵng"
+    },
+    {
+      "id": "SV004",
+      "name": "Phạm Quang Dũng",
+      "birth_date": "03/12/1997",
+      "hometown": "Hải Phòng",
+      "parish": "Gx Thánh Tâm",
+      "diocese": "Gp Hải Phòng"
+    },
+    {
+      "id": "SV005",
+      "name": "Hoàng Văn Em",
+      "birth_date": "28/05/1995",
+      "hometown": "Huế",
+      "parish": "Gx Phú Cam",
+      "diocese": "Gp Huế"
+    },
+    {
+      "id": "SV006",
+      "name": "Vũ Thành Phúc",
+      "birth_date": "14/09/1996",
+      "hometown": "Nam Định",
+      "parish": "Gx Thánh Phêrô",
+      "diocese": "Gp Bùi Chu"
+    },
+    {
+      "id": "SV007",
+      "name": "Đặng Minh Quang",
+      "birth_date": "07/01/1998",
+      "hometown": "Nghệ An",
+      "parish": "Gx Kim Liên",
+      "diocese": "Gp Vinh"
+    },
+    {
+      "id": "SV008",
+      "name": "Bùi Văn Hùng",
+      "birth_date": "19/04/1995",
+      "hometown": "Thái Bình",
+      "parish": "Gx Kẻ Sặt",
+      "diocese": "Gp Hải Phòng"
+    },
+    {
+      "id": "SV009",
+      "name": "Đinh Công Minh",
+      "birth_date": "26/10/1997",
+      "hometown": "Quảng Ninh",
+      "parish": "Gx Cửa Ông",
+      "diocese": "Gp Hà Nội"
+    },
+    {
+      "id": "SV010",
+      "name": "Ngô Thành Nam",
+      "birth_date": "12/06/1996",
+      "hometown": "Cần Thơ",
+      "parish": "Gx Chính Tòa",
+      "diocese": "Gp Cần Thơ"
+    }
+  ],
+  "last_updated": "2025-09-22T22:58:55.230950",
+  "total_count": 10
+}

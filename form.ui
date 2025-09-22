@@ -213,7 +213,7 @@
                                                                 </string>
                                                             </property>
                                                             <property name="placeholderText">
-                                                                <string>Email</string>
+                                                                <string>Email của bạn</string>
                                                             </property>
                                                         </widget>
                                                     </item>
@@ -258,7 +258,7 @@
                                                                 <enum>QLineEdit::EchoMode::Password</enum>
                                                             </property>
                                                             <property name="placeholderText">
-                                                                <string>Password</string>
+                                                                <string>Mật khẩu</string>
                                                             </property>
                                                         </widget>
                                                     </item>
@@ -300,7 +300,7 @@
                                                     </string>
                                                 </property>
                                                 <property name="text">
-                                                    <string>Forgot your password?</string>
+                                                    <string>Quên mật khẩu?</string>
                                                 </property>
                                                 <property name="alignment">
                                                     <set>Qt::AlignRight|Qt::AlignVCenter</set>
@@ -387,7 +387,7 @@
                                                                 </string>
                                                             </property>
                                                             <property name="text">
-                                                                <string>Sign in</string>
+                                                                <string>Đăng nhập</string>
                                                             </property>
                                                         </widget>
                                                     </item>

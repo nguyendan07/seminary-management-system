@@ -1,4 +1,3 @@
-from PySide6.QtCore import Qt
 from PySide6.QtWidgets import QMainWindow, QMessageBox
 
 from session_manager import WindowManager
