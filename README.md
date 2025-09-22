@@ -21,12 +21,14 @@ A desktop application for managing seminary operations built with PySide6 (Qt fo
 ## Installation
 
 ### 1. Clone the repository
+
 ```bash
 git clone https://github.com/nguyendan07/seminary-management-system.git
 cd seminary-management-system
 ```
 
 ### 2. Create and activate virtual environment
+
 ```bash
 python -m venv .qtcreator/Python_3_12_7venv
 # Windows
@@ -36,6 +38,7 @@ source .qtcreator/Python_3_12_7venv/bin/activate
 ```
 
 ### 3. Install dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -43,16 +46,19 @@ pip install -r requirements.txt
 ## Usage
 
 ### Running the application
+
 ```bash
 python mainwindow.py
 ```
 
 ### Building the project (using PySide6 tools)
+
 ```bash
 pyside6-project build
 ```
 
 ### Running via project tools
+
 ```bash
 pyside6-project run mainwindow.py
 ```
@@ -77,17 +83,22 @@ seminary-management-system/
 ## Development
 
 ### Prerequisites for development
+
 - Qt Creator (optional, for UI design)
 - PySide6 development tools
 
 ### Building UI files
+
 If you modify the `.ui` files, regenerate the Python UI files:
+
 ```bash
 pyside6-uic form.ui -o ui_form.py
 ```
 
 ### Code formatting
+
 This project uses:
+
 - `ruff` for linting and formatting
 - `isort` for import sorting
 
@@ -98,17 +109,21 @@ isort .
 ```
 
 ### Testing the login system
+
 Default test credentials:
+
 - Email: `admin@seminary.edu`
 - Password: `admin123`
 
 Or:
+
 - Email: `user@seminary.edu`  
 - Password: `user123`
 
 ## Configuration
 
 The application can be configured through:
+
 - [`pyproject.toml`](pyproject.toml) - Project settings
 - Environment variables for database connections
 - Configuration files (to be implemented)
@@ -116,11 +131,13 @@ The application can be configured through:
 ## Building for Distribution
 
 ### Using PySide6 Deploy
+
 ```bash
 pyside6-deploy mainwindow.py
 ```
 
 ### Manual build with Nuitka
+
 ```bash
 python -m nuitka --onefile --windows-icon-from-ico=images/logo.ico mainwindow.py
 ```
@@ -134,6 +151,7 @@ python -m nuitka --onefile --windows-icon-from-ico=images/logo.ico mainwindow.py
 5. Open a Pull Request
 
 ### Development Guidelines
+
 - Follow PEP 8 style guidelines
 - Write docstrings for all functions and classes
 - Add type hints where possible
@@ -142,10 +160,12 @@ python -m nuitka --onefile --windows-icon-from-ico=images/logo.ico mainwindow.py
 ## Dependencies
 
 Main dependencies:
+
 - `PySide6` - Qt for Python framework
 - `shiboken6` - Python bindings generator
 
 Development dependencies:
+
 - `ruff` - Fast Python linter and formatter
 - `isort` - Import sorting utility
 
@@ -164,6 +184,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Support
 
 If you encounter any issues or have questions:
+
 1. Check the [Issues](https://github.com/nguyendan07/seminary-management-system/issues) page
 2. Create a new issue with detailed description
 3. Contact: [your-email@example.com]

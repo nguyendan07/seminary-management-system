@@ -1,5 +1,18 @@
 [project]
-name = "PySide Widgets Project"
+name = "seminary-management-system"
+version = "0.1.0"
+description = "A desktop application for managing seminary operations built with PySide6 (Qt for Python)."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pyside6>=6.9.2",
+]
 
 [tool.pyside6-project]
-files = ["mainwindow.py", "form.ui"]
+files = ["mainwindow.py", "form.ui", "dashboard.py", "session_manager.py", "app.py"]
+
+[dependency-groups]
+dev = [
+    "isort>=6.0.1",
+    "ruff>=0.13.1",
+]
