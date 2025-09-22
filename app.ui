@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+    <class>AppWindow</class>
+    <widget class="QMainWindow" name="AppWindow">
+        <property name="geometry">
+            <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>1200</width>
+                <height>800</height>
+            </rect>
+        </property>
+        <property name="windowTitle">
+            <string>Seminary Management System - Dashboard</string>
+        </property>
+        <property name="styleSheet">
+            <string notr="true">QMainWindow {
+                background-color: #f8f9fa;
+                }</string>
+        </property>
+        <widget class="QWidget" name="centralwidget">
+            <property name="styleSheet">
+                <string notr="true">QWidget {
+                    background-color: #f8f9fa;
+                    }</string>
+            </property>
+            <layout class="QVBoxLayout" name="mainLayout">
+                <property name="spacing">
+                    <number>10</number>
+                </property>
+                <property name="leftMargin">
+                    <number>20</number>
+                </property>
+                <property name="topMargin">
+                    <number>20</number>
+                </property>
+                <property name="rightMargin">
+                    <number>20</number>
+                </property>
+                <property name="bottomMargin">
+                    <number>20</number>
+                </property>
+                <item>
+                    <layout class="QHBoxLayout" name="headerLayout">
+                        <property name="spacing">
+                            <number>20</number>
+                        </property>
+                        <property name="leftMargin">
+                            <number>15</number>
+                        </property>
+                        <property name="topMargin">
+                            <number>10</number>
+                        </property>
+                        <property name="rightMargin">
+                            <number>15</number>
+                        </property>
+                        <property name="bottomMargin">
+                            <number>10</number>
+                        </property>
+                        <item>
+                            <widget class="QLabel" name="welcomeLabel">
+                                <property name="styleSheet">
+                                    <string notr="true">QLabel {
+                                        font-size: 18px;
+                                        font-weight: bold;
+                                        color: #1F41BB;
+                                        padding: 10px;
+                                        border: none;
+                                        background: transparent;
+                                        }</string>
+                                </property>
+                                <property name="text">
+                                    <string>Chào mừng, [User Email]</string>
+                                </property>
+                            </widget>
+                        </item>
+                        <item>
+                            <spacer name="headerSpacer">
+                                <property name="orientation">
+                                    <enum>Qt::Orientation::Horizontal</enum>
+                                </property>
+                                <property name="sizeHint" stdset="0">
+                                    <size>
+                                        <width>40</width>
+                                        <height>20</height>
+                                    </size>
+                                </property>
+                            </spacer>
+                        </item>
+                        <item>
+                            <widget class="QPushButton" name="logoutButton">
+                                <property name="maximumSize">
+                                    <size>
+                                        <width>120</width>
+                                        <height>40</height>
+                                    </size>
+                                </property>
+                                <property name="styleSheet">
+                                    <string notr="true">QPushButton {
+                                        background-color: #dc3545;
+                                        color: white;
+                                        border: none;
+                                        padding: 8px 16px;
+                                        border-radius: 4px;
+                                        font-weight: bold;
+                                        font-size: 14px;
+                                        }
+                                        QPushButton:hover {
+                                        background-color: #c82333;
+                                        }
+                                        QPushButton:pressed {
+                                        background-color: #bd2130;
+                                        }</string>
+                                </property>
+                                <property name="text">
+                                    <string>Đăng xuất</string>
+                                </property>
+                            </widget>
+                        </item>
+                    </layout>
+                </item>
+                <item>
+                    <widget class="QTabWidget" name="tabWidget">
+                        <property name="styleSheet">
+                            <string notr="true">QTabWidget::pane {
+                                border: 1px solid #dee2e6;
+                                background-color: white;
+                                border-radius: 5px;
+                                }
+
+                                QTabBar::tab {
+                                background-color: #e9ecef;
+                                border: 1px solid #dee2e6;
+                                padding: 8px 15px;
+                                margin-right: 2px;
+                                border-top-left-radius: 5px;
+                                border-top-right-radius: 5px;
+                                }
+
+                                QTabBar::tab:selected {
+                                background-color: white;
+                                border-bottom: 1px solid white;
+                                color: #1F41BB;
+                                font-weight: bold;
+                                }
+
+                                QTabBar::tab:hover {
+                                background-color: #f8f9fa;
+                                }</string>
+                        </property>
+                        <property name="currentIndex">
+                            <number>0</number>
+                        </property>
+                        <widget class="QWidget" name="dashboardTab">
+                            <attribute name="title">
+                                <string>Dashboard</string>
+                            </attribute>
+                            <layout class="QVBoxLayout" name="dashboardLayout">
+                                <item>
+                                    <widget class="QLabel" name="dashboardContent">
+                                        <property name="styleSheet">
+                                            <string notr="true">QLabel {
+                                                font-size: 14px;
+                                                color: #495057;
+                                                padding: 20px;
+                                                line-height: 1.5;
+                                                }</string>
+                                        </property>
+                                        <property name="text">
+                                            <string>Dashboard Content
+
+                                                Thống kê tổng quan:
+                                                • Tổng số sinh viên: [Số liệu]
+                                                • Tổng số khóa học: [Số liệu]
+                                                • Điểm danh hôm nay: [Số liệu]
+                                                • Báo cáo mới nhất: [Ngày]
+
+                                                Nội dung chi tiết sẽ được bổ sung...</string>
+                                        </property>
+                                        <property name="alignment">
+                                            <set>
+                                                Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
+                                        </property>
+                                    </widget>
+                                </item>
+                            </layout>
+                        </widget>
+                        <widget class="QWidget" name="studentsTab">
+                            <attribute name="title">
+                                <string>Students</string>
+                            </attribute>
+                            <layout class="QVBoxLayout" name="studentsLayout">
+                                <item>
+                                    <widget class="QLabel" name="studentsContent">
+                                        <property name="styleSheet">
+                                            <string notr="true">QLabel {
+                                                font-size: 14px;
+                                                color: #495057;
+                                                padding: 20px;
+                                                line-height: 1.5;
+                                                }</string>
+                                        </property>
+                                        <property name="text">
+                                            <string>Student Management
+
+                                                Chức năng quản lý sinh viên:
+                                                • Thêm sinh viên mới
+                                                • Cập nhật thông tin sinh viên
+                                                • Xem danh sách sinh viên
+                                                • Tìm kiếm sinh viên
+                                                • Xuất báo cáo sinh viên
+
+                                                Module này đang được phát triển...</string>
+                                        </property>
+                                        <property name="alignment">
+                                            <set>
+                                                Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
+                                        </property>
+                                    </widget>
+                                </item>
+                            </layout>
+                        </widget>
+                        <widget class="QWidget" name="coursesTab">
+                            <attribute name="title">
+                                <string>Courses</string>
+                            </attribute>
+                            <layout class="QVBoxLayout" name="coursesLayout">
+                                <item>
+                                    <widget class="QLabel" name="coursesContent">
+                                        <property name="styleSheet">
+                                            <string notr="true">QLabel {
+                                                font-size: 14px;
+                                                color: #495057;
+                                                padding: 20px;
+                                                line-height: 1.5;
+                                                }</string>
+                                        </property>
+                                        <property name="text">
+                                            <string>Course Management
+
+                                                Chức năng quản lý khóa học:
+                                                • Tạo khóa học mới
+                                                • Chỉnh sửa thông tin khóa học
+                                                • Xem danh sách khóa học
+                                                • Quản lý lịch học
+                                                • Phân công giảng viên
+
+                                                Module này đang được phát triển...</string>
+                                        </property>
+                                        <property name="alignment">
+                                            <set>
+                                                Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
+                                        </property>
+                                    </widget>
+                                </item>
+                            </layout>
+                        </widget>
+                        <widget class="QWidget" name="attendanceTab">
+                            <attribute name="title">
+                                <string>Attendance</string>
+                            </attribute>
+                            <layout class="QVBoxLayout" name="attendanceLayout">
+                                <item>
+                                    <widget class="QLabel" name="attendanceContent">
+                                        <property name="styleSheet">
+                                            <string notr="true">QLabel {
+                                                font-size: 14px;
+                                                color: #495057;
+                                                padding: 20px;
+                                                line-height: 1.5;
+                                                }</string>
+                                        </property>
+                                        <property name="text">
+                                            <string>Attendance Management
+
+                                                Chức năng quản lý điểm danh:
+                                                • Điểm danh hàng ngày
+                                                • Xem lịch sử điểm danh
+                                                • Báo cáo tỷ lệ tham gia
+                                                • Gửi thông báo vắng mặt
+                                                • Xuất báo cáo điểm danh
+
+                                                Module này đang được phát triển...</string>
+                                        </property>
+                                        <property name="alignment">
+                                            <set>
+                                                Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
+                                        </property>
+                                    </widget>
+                                </item>
+                            </layout>
+                        </widget>
+                        <widget class="QWidget" name="reportsTab">
+                            <attribute name="title">
+                                <string>Reports</string>
+                            </attribute>
+                            <layout class="QVBoxLayout" name="reportsLayout">
+                                <item>
+                                    <widget class="QLabel" name="reportsContent">
+                                        <property name="styleSheet">
+                                            <string notr="true">QLabel {
+                                                font-size: 14px;
+                                                color: #495057;
+                                                padding: 20px;
+                                                line-height: 1.5;
+                                                }</string>
+                                        </property>
+                                        <property name="text">
+                                            <string>Reports Management
+
+                                                Chức năng báo cáo:
+                                                • Báo cáo tổng quan
+                                                • Báo cáo sinh viên
+                                                • Báo cáo khóa học
+                                                • Báo cáo điểm danh
+                                                • Xuất file Excel/PDF
+
+                                                Module này đang được phát triển...</string>
+                                        </property>
+                                        <property name="alignment">
+                                            <set>
+                                                Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
+                                        </property>
+                                    </widget>
+                                </item>
+                            </layout>
+                        </widget>
+                    </widget>
+                </item>
+            </layout>
+        </widget>
+        <widget class="QMenuBar" name="menubar">
+            <property name="geometry">
+                <rect>
+                    <x>0</x>
+                    <y>0</y>
+                    <width>1200</width>
+                    <height>21</height>
+                </rect>
+            </property>
+            <widget class="QMenu" name="menuFile">
+                <property name="title">
+                    <string>File</string>
+                </property>
+                <addaction name="actionLogout" />
+                <addaction name="separator" />
+                <addaction name="actionExit" />
+            </widget>
+            <widget class="QMenu" name="menuView">
+                <property name="title">
+                    <string>View</string>
+                </property>
+                <addaction name="actionDashboard" />
+                <addaction name="actionStudents" />
+                <addaction name="actionCourses" />
+                <addaction name="actionAttendance" />
+                <addaction name="actionReports" />
+            </widget>
+            <widget class="QMenu" name="menuHelp">
+                <property name="title">
+                    <string>Help</string>
+                </property>
+                <addaction name="actionAbout" />
+            </widget>
+            <addaction name="menuFile" />
+            <addaction name="menuView" />
+            <addaction name="menuHelp" />
+        </widget>
+        <widget class="QStatusBar" name="statusbar">
+            <property name="styleSheet">
+                <string notr="true">QStatusBar {
+                    background-color: #e9ecef;
+                    border-top: 1px solid #dee2e6;
+                    font-size: 12px;
+                    color: #6c757d;
+                    }</string>
+            </property>
+        </widget>
+        <action name="actionLogout">
+            <property name="text">
+                <string>Logout</string>
+            </property>
+            <property name="shortcut">
+                <string>Ctrl+L</string>
+            </property>
+        </action>
+        <action name="actionExit">
+            <property name="text">
+                <string>Exit</string>
+            </property>
+            <property name="shortcut">
+                <string>Ctrl+Q</string>
+            </property>
+        </action>
+        <action name="actionAbout">
+            <property name="text">
+                <string>About</string>
+            </property>
+            <property name="shortcut">
+                <string>F1</string>
+            </property>
+        </action>
+        <action name="actionDashboard">
+            <property name="text">
+                <string>Dashboard</string>
+            </property>
+            <property name="shortcut">
+                <string>Ctrl+1</string>
+            </property>
+        </action>
+        <action name="actionStudents">
+            <property name="text">
+                <string>Students</string>
+            </property>
+            <property name="shortcut">
+                <string>Ctrl+2</string>
+            </property>
+        </action>
+        <action name="actionCourses">
+            <property name="text">
+                <string>Courses</string>
+            </property>
+            <property name="shortcut">
+                <string>Ctrl+3</string>
+            </property>
+        </action>
+        <action name="actionAttendance">
+            <property name="text">
+                <string>Attendance</string>
+            </property>
+            <property name="shortcut">
+                <string>Ctrl+4</string>
+            </property>
+        </action>
+        <action name="actionReports">
+            <property name="text">
+                <string>Reports</string>
+            </property>
+            <property name="shortcut">
+                <string>Ctrl+5</string>
+            </property>
+        </action>
+    </widget>
+    <resources />
+    <connections>
+        <connection>
+            <sender>logoutButton</sender>
+            <signal>clicked()</signal>
+            <receiver>AppWindow</receiver>
+            <slot>handle_logout()</slot>
+            <hints>
+                <hint type="sourcelabel">
+                    <x>1100</x>
+                    <y>40</y>
+                </hint>
+                <hint type="destinationlabel">
+                    <x>600</x>
+                    <y>400</y>
+                </hint>
+            </hints>
+        </connection>
+        <connection>
+            <sender>actionLogout</sender>
+            <signal>triggered()</signal>
+            <receiver>AppWindow</receiver>
+            <slot>handle_logout()</slot>
+            <hints>
+                <hint type="sourcelabel">
+                    <x>-1</x>
+                    <y>-1</y>
+                </hint>
+                <hint type="destinationlabel">
+                    <x>600</x>
+                    <y>400</y>
+                </hint>
+            </hints>
+        </connection>
+        <connection>
+            <sender>actionExit</sender>
+            <signal>triggered()</signal>
+            <receiver>AppWindow</receiver>
+            <slot>close()</slot>
+            <hints>
+                <hint type="sourcelabel">
+                    <x>-1</x>
+                    <y>-1</y>
+                </hint>
+                <hint type="destinationlabel">
+                    <x>600</x>
+                    <y>400</y>
+                </hint>
+            </hints>
+        </connection>
+        <connection>
+            <sender>actionAbout</sender>
+            <signal>triggered()</signal>
+            <receiver>AppWindow</receiver>
+            <slot>show_about()</slot>
+            <hints>
+                <hint type="sourcelabel">
+                    <x>-1</x>
+                    <y>-1</y>
+                </hint>
+                <hint type="destinationlabel">
+                    <x>600</x>
+                    <y>400</y>
+                </hint>
+            </hints>
+        </connection>
+        <connection>
+            <sender>actionDashboard</sender>
+            <signal>triggered()</signal>
+            <receiver>AppWindow</receiver>
+            <slot>switch_to_dashboard()</slot>
+            <hints>
+                <hint type="sourcelabel">
+                    <x>-1</x>
+                    <y>-1</y>
+                </hint>
+                <hint type="destinationlabel">
+                    <x>600</x>
+                    <y>400</y>
+                </hint>
+            </hints>
+        </connection>
+        <connection>
+            <sender>actionStudents</sender>
+            <signal>triggered()</signal>
+            <receiver>AppWindow</receiver>
+            <slot>switch_to_students()</slot>
+            <hints>
+                <hint type="sourcelabel">
+                    <x>-1</x>
+                    <y>-1</y>
+                </hint>
+                <hint type="destinationlabel">
+                    <x>600</x>
+                    <y>400</y>
+                </hint>
+            </hints>
+        </connection>
+        <connection>
+            <sender>actionCourses</sender>
+            <signal>triggered()</signal>
+            <receiver>AppWindow</receiver>
+            <slot>switch_to_courses()</slot>
+            <hints>
+                <hint type="sourcelabel">
+                    <x>-1</x>
+                    <y>-1</y>
+                </hint>
+                <hint type="destinationlabel">
+                    <x>600</x>
+                    <y>400</y>
+                </hint>
+            </hints>
+        </connection>
+        <connection>
+            <sender>actionAttendance</sender>
+            <signal>triggered()</signal>
+            <receiver>AppWindow</receiver>
+            <slot>switch_to_attendance()</slot>
+            <hints>
+                <hint type="sourcelabel">
+                    <x>-1</x>
+                    <y>-1</y>
+                </hint>
+                <hint type="destinationlabel">
+                    <x>600</x>
+                    <y>400</y>
+                </hint>
+            </hints>
+        </connection>
+        <connection>
+            <sender>actionReports</sender>
+            <signal>triggered()</signal>
+            <receiver>AppWindow</receiver>
+            <slot>switch_to_reports()</slot>
+            <hints>
+                <hint type="sourcelabel">
+                    <x>-1</x>
+                    <y>-1</y>
+                </hint>
+                <hint type="destinationlabel">
+                    <x>600</x>
+                    <y>400</y>
+                </hint>
+            </hints>
+        </connection>
+    </connections>
+    <slots>
+        <slot>handle_logout()</slot>
+        <slot>show_about()</slot>
+        <slot>switch_to_dashboard()</slot>
+        <slot>switch_to_students()</slot>
+        <slot>switch_to_courses()</slot>
+        <slot>switch_to_attendance()</slot>
+        <slot>switch_to_reports()</slot>
+    </slots>
+</ui>
