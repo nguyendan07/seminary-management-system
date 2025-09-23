@@ -8,6 +8,7 @@ import os
 from datetime import datetime, timedelta
 from PySide6.QtCore import QStandardPaths
 from PySide6.QtGui import QIcon
+from PySide6.QtWidgets import QApplication
 
 
 class SessionManager:
@@ -144,10 +145,15 @@ class WindowManager:
             # Đóng cửa sổ hiện tại nếu có
             if current_window:
                 current_window.close()
+            
+            # Kiểm tra xem có MainWindow nào đang mở không
+            app = QApplication.instance()
+            for widget in app.topLevelWidgets():
+                if widget.__class__.__name__ == "MainWindow" and widget.isVisible():
+                    return True  # Đã có login window, không tạo thêm
 
             # Hiển thị cửa sổ login
             WindowManager.show_login_window()
-
             return True
 
         except Exception as e:

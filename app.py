@@ -32,16 +32,6 @@ class AppWindow(QMainWindow):
 
         # Connect signals
         self.ui.logoutButton.clicked.connect(self.handle_logout)
-        self.ui.actionLogout.triggered.connect(self.handle_logout)
-        self.ui.actionExit.triggered.connect(self.close)
-        self.ui.actionAbout.triggered.connect(self.show_about)
-
-        # Connect tab switching menu actions
-        self.ui.actionDashboard.triggered.connect(self.switch_to_dashboard)
-        self.ui.actionStudents.triggered.connect(self.switch_to_students)
-        self.ui.actionCourses.triggered.connect(self.switch_to_courses)
-        self.ui.actionAttendance.triggered.connect(self.switch_to_attendance)
-        self.ui.actionReports.triggered.connect(self.switch_to_reports)
 
         # Connect student management signals
         self.ui.addStudentButton.clicked.connect(self.add_student)

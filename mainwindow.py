@@ -50,14 +50,14 @@ class MainWindow(QMainWindow):
 
     def setup_circular_logo(self):
         """Create a circular logo from the logo image"""
-        if hasattr(self.ui, "logoLabel"):
+        if hasattr(self.ui, "companyLogo"):
             # Load the logo image
             logo_path = os.path.join(os.path.dirname(__file__), "images", "logo.png")
 
             if os.path.exists(logo_path):
                 # Load and scale the original image
                 original_pixmap = QPixmap(logo_path)
-                size = 120  # Size of the circular logo (increased from 90)
+                size = 36
 
                 # Create a circular mask
                 circular_pixmap = QPixmap(size, size)
@@ -81,8 +81,8 @@ class MainWindow(QMainWindow):
                 painter.end()
 
                 # Set the circular logo
-                self.ui.logoLabel.setPixmap(circular_pixmap)
-                self.ui.logoLabel.setAlignment(Qt.AlignCenter)
+                self.ui.companyLogo.setPixmap(circular_pixmap)
+                self.ui.companyLogo.setAlignment(Qt.AlignCenter)
 
     def setup_validation(self):
         # Email validation pattern
